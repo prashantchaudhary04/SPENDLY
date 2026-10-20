@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+/* Dark mode is controlled by a "dark" class on <html> (see ThemeContext) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --pop-bg: #ffffff;
+  --pop-border: #e2e8f0;
+  --pop-fg: #0f172a;
+}
+.dark {
+  --pop-bg: #1e293b;
+  --pop-border: #334155;
+  --pop-fg: #f1f5f9;
+  color-scheme: dark; /* dark date pickers and scrollbars */
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100;
+}
+
+@layer components {
+  .card {
+    @apply rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900;
+  }
+  .field-label {
+    @apply mb-1 block text-sm font-medium text-slate-700 dark:text-slate-300;
+  }
+  .field-input {
+    @apply w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 shadow-sm outline-none transition placeholder:text-slate-400 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 disabled:cursor-not-allowed disabled:opacity-60 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100;
+  }
+}
