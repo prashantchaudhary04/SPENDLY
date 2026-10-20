@@ -3,7 +3,7 @@
 
 A full-stack personal finance application built with the **MERN stack**. Track income and expenses, manage monthly budgets, and visualize spending patterns using charts powered by MongoDB aggregation pipelines.
 
-**Live Demo:** [Spendly]() 
+**Live Demo:** [Spendly](https://spendly-brown-eight.vercel.app) 
 
 **Demo Login:** `demo@example.com` / `Demo@1234`
 
